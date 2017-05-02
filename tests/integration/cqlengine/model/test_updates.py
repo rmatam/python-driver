@@ -336,7 +336,6 @@ class ModelWithDefaultTests(BaseCassEngTestCase):
                          {'id': 2, 'dummy': 2, 'mf': {1: 1, 4: 4}, "udt": udt, "udt_default": udt_default})
 
         item.update(udt_default=None)
-        print ModelWithDefaultCollection.objects.get(id=2)._as_dict()
         self.assertEqual(ModelWithDefaultCollection.objects.get(id=2)._as_dict(),
                          {'id': 2, 'dummy': 2, 'mf': {1: 1, 4: 4}, "udt": udt, "udt_default": None})
 
