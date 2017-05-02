@@ -235,8 +235,6 @@ class Column(object):
         """
         Converts python value into database value
         """
-        if value is None and self.has_default:
-            return self.get_default()
         return value
 
     @property
